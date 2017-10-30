@@ -133,13 +133,7 @@
 
   tt,
   code {
-    padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    margin: 0;
     font-size: 0.9em;
-    background-color: $code-background;
-    font-family: $family-monospace;
 
     &::before,
     &::after {
@@ -169,8 +163,6 @@
   }
 
   pre {
-    margin: 2rem auto;
-    padding: 1rem;
     overflow-x: auto;
     border-radius: $radius;
     font-size: 0.9rem;
@@ -181,7 +173,7 @@
 
     code {
       font-size: 0.9rem;
-      background-color: transparent;
+      border-radius: $radius;
 
       &::before,
       &::after {
