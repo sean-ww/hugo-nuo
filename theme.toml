@@ -3,13 +3,13 @@
 
 name = "Hugo Nuo"
 license = "MIT"
-licenselink = "https://github.com/laozhu/hugo-nuo/blob/master/LICENSE.md"
+licenselink = "https://github.com/sean-ww/hugo-nuo/blob/master/LICENSE.md"
 description = "An responsive light & clean hugo theme for blogger."
-homepage = "https://github.com/laozhu/hugo-nuo"
+homepage = "https://github.com/sean-ww/hugo-nuo"
 tags = ["Responsive", "blog", "Google analytics", "Disqus", "Light", "Clean", "Polyfill"]
 features = ["Blog", "Works", "Links", "Portfolio"]
 min_version = "0.24"
 
 [author]
-  name = "Ritchie Zhu"
-  homepage = "https://laozhu.me"
+  name = "Sean Wallis"
+  homepage = "https://seanwallis.com"
