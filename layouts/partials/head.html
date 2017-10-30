@@ -3,37 +3,37 @@
 <!-- Site & Page Meta Data -->
 {{ if eq .Type "post" }}
 
-  <!-- Page Author & Description -->
-  <meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
-  <meta name="description" content="{{ .Summary | plainify }}" />
+<!-- Page Author & Description -->
+<meta name="author" content="{{ if isset .Params "author" }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}" />
+<meta name="description" content="{{ .Summary | plainify }}" />
 
-  <!-- Twitter Card -->
-  {{ if isset .Params "cover" }}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Summary | plainify }}" />
-    <meta name="twitter:image" content="{{ .Params.cover | absURL }}" />
-  {{ else }}
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
-    <meta name="twitter:title" content="{{ .Title }}" />
-    <meta name="twitter:description" content="{{ .Summary | plainify }}" />
-    <meta name="twitter:image" content="{{ $avatar | absURL }}" />
-  {{ end }}
+<!-- Twitter Card -->
+{{ if isset .Params "cover" }}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Summary | plainify }}" />
+<meta name="twitter:image" content="{{ .Params.cover | absURL }}" />
+{{ else }}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Summary | plainify }}" />
+<meta name="twitter:image" content="{{ $avatar | absURL }}" />
+{{ end }}
 
 {{ else }}
 
-  <!-- Site Author & Description -->
-  <meta name="author" content="{{ .Site.Params.author }}" />
-  <meta name="description" content="{{ .Site.Params.description }}" />
+<!-- Site Author & Description -->
+<meta name="author" content="{{ .Site.Params.author }}" />
+<meta name="description" content="{{ .Site.Params.description }}" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
-  <meta name="twitter:title" content="{{ if isset .Site.Params "seotitle" }}{{ .Site.Params.seotitle }}{{ else }}{{ .Site.Title }}{{ end }}" />
-  <meta name="twitter:description" content="{{ .Site.Params.description }}" />
-  <meta name="twitter:image" content="{{ $avatar | absURL }}" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@{{ .Site.Params.twitter | default $gohugoio }}" />
+<meta name="twitter:title" content="{{ if isset .Site.Params "seotitle" }}{{ .Site.Params.seotitle }}{{ else }}{{ .Site.Title }}{{ end }}" />
+<meta name="twitter:description" content="{{ .Site.Params.description }}" />
+<meta name="twitter:image" content="{{ $avatar | absURL }}" />
 
 {{ end }}
 
@@ -79,3 +79,8 @@
 <link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
 {{ end }}
 <link rel="stylesheet" href="{{ "/css/bundle.css" | relURL }}" />
+
+<!-- Syntax highlighting -->
+<link rel="stylesheet" href="{{ "/css/highlight/zenburn.css" | relURL }}" />
+<script rel="text/javascript" src="{{ "/js/highlight.pack.js" | relURL }}" ></script>
+<script> hljs.initHighlightingOnLoad();</script>
