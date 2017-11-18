@@ -1,0 +1,21 @@
+<nav class="social-menu" style="display: inline-block;">
+    <ul class="social-list">
+
+        <li class="social-item">
+            {{ if isset .Params "tweet" }}
+                <a href="//twitter.com/intent/tweet?text={{ .Params.tweet }}&url={{ .Permalink }}" title="Share on Twitter"><span class="icon icon-twitter"></span></a>
+            {{ else }}
+                <a href="//twitter.com/intent/tweet?text={{ .Params.title }}&url={{ .Permalink }}" title="Share on Twitter"><span class="icon icon-twitter"></span></a>
+            {{ end }}
+        </li>
+
+        <li class="social-item">
+            <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Share on Facebook"><span class="icon icon-facebook"></span></a>
+        </li>
+
+        <li class="social-item">
+            <a href="//www.linkedin.com/shareArticle?mini=true&title={{ .Params.title }}&url={{ .Permalink }}" title="Share on Linkedin"><span class="icon icon-linkedin"></span></a>
+        </li>
+
+    </ul>
+</nav>

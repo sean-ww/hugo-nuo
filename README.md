@@ -8,3 +8,5 @@ The Changes:
 * Syntax highlighting added
 * The avatar is now also a home link
 * The social menu has been moved to always display below the subtitle
+* Markdown can be displayed in summary content in conjunction with the ```<!--more-->``` tag
+* Share links added for each post, with a new tweet variable to define tweet text
